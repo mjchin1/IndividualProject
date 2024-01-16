@@ -179,16 +179,6 @@ const places = [
   },
 
   {
-    placeName: "",
-    address: "",
-    hours: "",
-    imgUrl: "",
-    description: "",
-    locationType: "",
-    neighborhood: "",
-  },
-
-  {
     placeName: "Living Water Tea House",
     address: "1453 W Taylor St, Chicago, IL 60607",
     hours: "12:00pm-7:00pm daily",
@@ -198,16 +188,6 @@ const places = [
       "A serene tea space with soft lighting and handmade pottery as decor.",
     locationType: "Tea Room",
     neighborhood: "Near West Side",
-  },
-
-  {
-    placeName: "",
-    address: "",
-    hours: "",
-    imgUrl: "",
-    description: "",
-    locationType: "",
-    neighborhood: "",
   },
 
   {
@@ -246,7 +226,7 @@ const places = [
   },
 
   {
-    placeName: "",
+    placeName: "Stony Island Arts Bank",
     address: "6760 S Stony Is Ave, Chicago, IL 60649",
     hours: "8:00am-5:00pm daily",
     imgUrl:
@@ -263,8 +243,15 @@ const users = [
   {
     firstName: "Melody",
     lastName: "Nose",
-    userName: "placeLuv",
+    username: "placegirl",
     password: "alldaplaces",
+  },
+
+  {
+    firstName: "Lucky",
+    lastName: "Sleepfield",
+    username: "placeguy",
+    password: "allofdaplaces",
   },
 ];
 
@@ -273,6 +260,24 @@ const userFavoritePlaces = [
   {
     userId: 1,
     placeId: 1,
+  },
+  {
+    userId: 1,
+    placeId: 2,
+  },
+  {
+    userId: 1,
+    placeId: 3,
+  },
+
+  {
+    userId: 2,
+    placeId: 6,
+  },
+
+  {
+    userId: 2,
+    placeId: 8,
   },
 ];
 

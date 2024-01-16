@@ -1,7 +1,7 @@
 //pulling in the connection to my local database
 const client = require("./client");
 
-const { places, users } = require("./seedData");
+const { places, users, userFavoritePlaces } = require("./seedData");
 
 //Drop tables for data cleanliness
 const dropTables = async () => {
@@ -27,7 +27,7 @@ const createTables = async () => {
     await client.query(`
         CREATE TABLE places (
             place_id SERIAL PRIMARY KEY,
-            place_name TEXT UNIQUE NOT NULL,
+            place_name TEXT NOT NULL,
             address TEXT UNIQUE NOT NULL,
             hours TEXT NOT NULL,
             img_url TEXT UNIQUE NOT NULL,
@@ -78,35 +78,46 @@ const createInitialPlaces = async () => {
         ]
       );
     }
-    console.log("created places");
+    console.log("created places!");
   } catch (error) {
     throw error;
   }
 };
 
-// //Create species
-// const createInitialSpecies = async () => {
-//   try {
-//     for (const lilGuy of species) {
-//       const {
-//         rows: [species],
-//       } = await client.query(
-//         `
-//                 INSERT INTO species(name, "primaryTypeId", "secondaryTypeId")
-//                 VALUES($1, $2, $3);
-//             `,
-//         [
-//           lilGuy.name,
-//           lilGuy.primaryTypeId,
-//           lilGuy.secondaryTypeId ? lilGuy.secondaryTypeId : null,
-//         ]
-//       );
-//     }
-//     console.log("created species");
-//   } catch (error) {
-//     throw error;
-//   }
-// };
+//Create species
+const createInitialUsers = async () => {
+  try {
+    for (const user of users) {
+      await client.query(
+        `
+                INSERT INTO users(first_name, last_name, username, password)
+                VALUES($1, $2, $3, $4);
+            `,
+        [user.firstName, user.lastName, user.username, user.password]
+      );
+    }
+    console.log("created users!");
+  } catch (error) {
+    throw error;
+  }
+};
+
+const createInitialFavoritePlaces = async () => {
+  try {
+    for (const favPlace of userFavoritePlaces) {
+      await client.query(
+        `
+                INSERT INTO user_favorite_places(user_id, place_id)
+                VALUES($1, $2);
+            `,
+        [favPlace.userId, favPlace.placeId]
+      );
+    }
+    console.log("created favorite places!");
+  } catch (error) {
+    throw error;
+  }
+};
 
 // //INSERT INTO table(column)
 // //VALUES(column_data);
@@ -125,6 +136,8 @@ const buildDb = async () => {
     await createTables();
 
     await createInitialPlaces();
+    await createInitialUsers();
+    await createInitialFavoritePlaces();
     // await createInitialUsers();
   } catch (error) {
     console.error(error);
