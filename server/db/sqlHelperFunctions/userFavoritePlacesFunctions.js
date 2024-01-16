@@ -1,5 +1,33 @@
-const client = require("./client");
+const client = require("../client");
 const util = require("util");
+
+async function getAllFavoritePlaces() {
+  try {
+    const { rows } = await client.query(`
+          SELECT * FROM user_favorite_places;
+      `);
+    return rows;
+  } catch (err) {
+    throw err;
+  }
+}
+
+async function getFavoritePlaceById(id) {
+  try {
+    const {
+      rows: [user_favorite_place],
+    } = await client.query(
+      `
+          SELECT * FROM user_favorite_places
+          WHERE id = $1;
+      `,
+      [id]
+    );
+    return user_favorite_place;
+  } catch (error) {
+    throw error;
+  }
+}
 
 async function addFavoritePlace(body) {
   const { userId, placeId } = body;
@@ -39,6 +67,8 @@ async function deleteFavoritePlace(id) {
   }
 }
 module.exports = {
+  getAllFavoritePlaces,
+  getFavoritePlaceById,
   addFavoritePlace,
   deleteFavoritePlace,
 };

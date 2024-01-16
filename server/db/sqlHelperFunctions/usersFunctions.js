@@ -1,4 +1,4 @@
-const client = require("./client");
+const client = require("../client");
 const util = require("util");
 
 // POST - /api/board-games - create a new board game
@@ -6,7 +6,7 @@ async function createUser(body) {
   const { firstName, lastName, username, password } = body;
   try {
     const {
-      rows: [place],
+      rows: [users],
     } = await client.query(
       `
           INSERT INTO users(first_name, last_name, username, password)
@@ -15,12 +15,23 @@ async function createUser(body) {
       `,
       [firstName, lastName, username, password]
     );
-    return place;
+    return users;
   } catch (error) {
     throw error;
   }
 }
 //login should be POST
+
+async function getAllUsers() {
+  try {
+    const { rows } = await client.query(`
+          SELECT * FROM users;
+      `);
+    return rows;
+  } catch (err) {
+    throw err;
+  }
+}
 
 async function getUserById(id) {
   try {
@@ -33,7 +44,7 @@ async function getUserById(id) {
       `,
       [id]
     );
-    return place;
+    return user;
   } catch (error) {
     throw error;
   }
@@ -60,9 +71,7 @@ async function logUserIn(body) {
 
 async function getFavoritePlacesByUserId(id) {
   try {
-    const {
-      rows: [place],
-    } = await client.query(
+    const { rows } = await client.query(
       `
           SELECT * FROM places
           INNER JOIN user_favorite_places
@@ -71,7 +80,25 @@ async function getFavoritePlacesByUserId(id) {
       `,
       [id]
     );
-    return place;
+    return rows;
+  } catch (error) {
+    throw error;
+  }
+}
+
+async function deleteUser(id) {
+  try {
+    const {
+      rows: [user],
+    } = await client.query(
+      `
+          DELETE FROM users
+          WHERE user_id = $1
+          RETURNING *;
+      `,
+      [id]
+    );
+    return user;
   } catch (error) {
     throw error;
   }
@@ -79,7 +106,9 @@ async function getFavoritePlacesByUserId(id) {
 
 module.exports = {
   createUser,
+  getAllUsers,
   getUserById,
   logUserIn,
   getFavoritePlacesByUserId,
+  deleteUser,
 };

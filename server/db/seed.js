@@ -46,9 +46,10 @@ const createTables = async () => {
 
         CREATE TABLE user_favorite_places (
           favorite_place_id SERIAL PRIMARY KEY,
-          user_id INTEGER REFERENCES users(user_id) NOT NULL,
-          place_id INTEGER REFERENCES places(place_id) NOT NULL
+          user_id INTEGER REFERENCES users(user_id) ON DELETE CASCADE,
+          place_id INTEGER REFERENCES places(place_id) ON DELETE CASCADE
         );
+
     `);
     console.log("tables have been built!");
   } catch (error) {

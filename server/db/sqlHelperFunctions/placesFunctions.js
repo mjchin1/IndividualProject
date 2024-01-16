@@ -1,5 +1,5 @@
-const client = require("./client");
-const util = require("util");
+const client = require("../client");
+// const util = require("../util");
 
 // GET - /api/board-games - get all board games
 async function getAllPlaces() {
@@ -66,8 +66,27 @@ async function createPlace(body) {
   }
 }
 
+async function deletePlace(id) {
+  try {
+    const {
+      rows: [place],
+    } = await client.query(
+      `
+        DELETE FROM places
+        WHERE place_id = $1
+        RETURNING *;
+      `,
+      [id]
+    );
+    return place;
+  } catch (error) {
+    throw error;
+  }
+}
+
 module.exports = {
   getAllPlaces,
   getPlaceById,
   createPlace,
+  deletePlace,
 };
