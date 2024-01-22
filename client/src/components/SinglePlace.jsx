@@ -1,8 +1,10 @@
 import React from 'react';
 import { useFetchSinglePlaceQuery } from '../api/placesAPI.js';
 import { useNavigate, useParams } from 'react-router-dom';
+import FavoriteButton from './FavoriteButton'
 
-export default function SinglePlace() {
+
+export default function SinglePlace({userId}) {
   const { id } = useParams();
   const { data = {}, error, isLoading } = useFetchSinglePlaceQuery(id);
   const navigate = useNavigate();
@@ -26,6 +28,7 @@ export default function SinglePlace() {
           <span className="placeName">  {data.place_name} </span> <br />
           <span> {data.description} </span> <br></br> <br></br>
           <div className="singlePlacePageButtons">
+          <FavoriteButton userId = {userId} placeId = {data.place_id}/>
           <button onClick={() => {
             navigate(`/places`)
           }} >Back to All Places</button>

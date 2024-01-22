@@ -28,7 +28,7 @@ router.get("/:id", async (req, res, next) => {
   }
 });
 
-router.post("/", async (req, res, next) => {
+router.post("/register", async (req, res, next) => {
   try {
     const user = await createUser(req.body);
     res.send(user);
@@ -37,7 +37,7 @@ router.post("/", async (req, res, next) => {
   }
 });
 
-router.post("/", async (req, res, next) => {
+router.post("/login", async (req, res, next) => {
   try {
     const user = await logUserIn(req.body);
     res.send(user);

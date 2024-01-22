@@ -15,8 +15,10 @@ async function createUser(body) {
       `,
       [firstName, lastName, username, password]
     );
+    console.log("user created!");
     return users;
   } catch (error) {
+    console.log("error creating user");
     throw error;
   }
 }
@@ -58,8 +60,7 @@ async function logUserIn(body) {
     } = await client.query(
       `
           SELECT * FROM users
-          WHERE username = $1 AND password = $2
-          RETURNING *;
+          WHERE username = $1 AND password = $2;
       `,
       [username, password]
     );

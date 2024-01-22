@@ -4,19 +4,28 @@ import React from 'react';
 import { Routes, Route} from 'react-router-dom';
 import Places from './components/Places';
 import SinglePlace from './components/SinglePlace';
-;
+import Navigations from './components/Navigations';
+import Register from './components/Register';
+import Login from './components/Login';
+import Favorites from './components/Favorites';
 
 function App() {
-  
+  const [user, setUser] = useState({});
+  const [favorites, setFavorites] = useState([]);
   return (
     <div className='app'>
       <h1 id='appHeading'>THIS BEAUTIFUL PLACE</h1>
-
+      <Navigations user = {user}/>
        <div className='App'>
         <Routes>
           <Route path="/" element={<Places/>}/>
           <Route path="/places" element={<Places/>}/>
-          <Route path="/places/:id" element={<SinglePlace/>}/>
+          <Route path="/places/:id" element={<SinglePlace userId = {user.user_id}/>}/>
+          <Route path="/register" element={<Register/>}/>
+          <Route path="/login" element={<Login user={user} setUser={setUser} />}/>
+          <Route path="/users/:id/favorites" element={<Favorites favorites = {favorites} setFavorites = {setFavorites} user={user} />}/>
+
+
         </Routes>
        </div>
     </div>
