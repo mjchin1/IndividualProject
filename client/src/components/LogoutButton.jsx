@@ -1,14 +1,18 @@
-// import {useNavigate} from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 
 export default function LogoutButton({ setUser }) {
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
   function clearUser() {
-    setUser();
+    setUser({});
   };
 
   return (
     <div className="logoutButton">
-      <button onClick={clearUser}>Log Out</button>
+      <button onClick={() => { 
+        navigate("/logout")
+        clearUser()
+        }}
+      > Log Out</button>
     </div>
   );
 };

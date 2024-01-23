@@ -3,7 +3,7 @@ import { useFetchPlacesQuery } from '../api/placesAPI.js';
 import { useNavigate } from 'react-router-dom';
 
 
-const   Places = () => {
+const Places = () => {
   const { data = [], error, isLoading } = useFetchPlacesQuery();
   const navigate = useNavigate();
 

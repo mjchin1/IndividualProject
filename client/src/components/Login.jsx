@@ -6,7 +6,7 @@ import LogoutButton from './LogoutButton';
 export default function Login({ setUser, user}) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   async function handleSubmit(event) {
     event.preventDefault();
@@ -36,8 +36,6 @@ export default function Login({ setUser, user}) {
   return (
     <div className="loginPage">
       <h2 className="loginHeading">Log In</h2>
-      <div className="errorMessage">
-      </div>
 
       <form className="loginForm"onSubmit={handleSubmit}>
 

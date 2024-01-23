@@ -28,9 +28,9 @@ const createTables = async () => {
         CREATE TABLE places (
             place_id SERIAL PRIMARY KEY,
             place_name TEXT NOT NULL,
-            address TEXT UNIQUE NOT NULL,
+            address TEXT NOT NULL,
             hours TEXT NOT NULL,
-            img_url TEXT UNIQUE NOT NULL,
+            img_url TEXT NOT NULL,
             description TEXT NOT NULL,
             location_type TEXT NOT NULL,
             neighborhood TEXT NOT NULL

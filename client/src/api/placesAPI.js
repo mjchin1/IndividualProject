@@ -21,14 +21,26 @@ export const placesApi = createApi({
     // Define an endpoint that fetches players
     fetchPlaces: builder.query({
       query: () => "/places",
+      providesTags: ["Place"],
     }),
     fetchSinglePlace: builder.query({
       query: (id) => `/places/${id}`,
     }),
-
+    addPlace: builder.mutation({
+      query: (body) => ({
+        url: "places",
+        method: "POST",
+        body,
+      }),
+      invalidatesTags: ["Place"],
+    }),
     // The part of the URL that comes after the baseUrl for this specific endpoint
   }),
 });
 
 // Export hooks for each endpoint - in this case, a React hook that triggers the fetchPlayers query
-export const { useFetchPlacesQuery, useFetchSinglePlaceQuery } = placesApi;
+export const {
+  useFetchPlacesQuery,
+  useFetchSinglePlaceQuery,
+  useAddPlaceMutation,
+} = placesApi;
