@@ -29,7 +29,7 @@ function App() {
           <Route path="/" element={<Places/>}/>
           <Route path="/places" element={<Places/>}/>
           <Route path="/places/:id" element={<SinglePlace userId={user.user_id}/>}/>
-          <Route path="/register" element={<Register/>}/>
+          <Route path="/register" element={<Register user={user} setUser= {setUser} />}/>
           <Route path="/login" element={<Login user={user} setUser={setUser} />}/>
           <Route path="/logout" element={<LogoutPage/>}/>
           <Route path="/account" element={<Account user={user} favorites={favorites}/>}/>

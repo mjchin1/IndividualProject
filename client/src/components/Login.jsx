@@ -33,10 +33,9 @@ export default function Login({ setUser, user}) {
 
   return (
     <div className="loginPage">
-      <h2 className="loginHeading">Log In</h2>
 
       <form className="loginForm"onSubmit={handleSubmit}>
-
+        <h2 className="loginHeading">Log In</h2>
         <label>
           Username:<input value={username} onChange={(event) => setUsername(event.target.value)} />
         </label>
@@ -47,7 +46,7 @@ export default function Login({ setUser, user}) {
         >Submit</button>
 
       </form>
-      {user.user_id ? <> <h1 className="successMessage">Success! You are now logged in. </h1>
+      {user.user_id ? <> <h1 className="successMessage"> Welcome back, {`${user.first_name}`}!</h1>
       
         <div className="loginPageButtons">
         <button onClick={() => {

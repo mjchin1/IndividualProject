@@ -13,21 +13,20 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
+
 
 body {
-  margin: 0;
+  margin: 0 auto;
   display: flex;
-  place-items: center;
+  justify-content: center;
   min-width: 320px;
   min-height: 100vh;
+}
+
+.appTitle {
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 h1 {
@@ -54,17 +53,24 @@ button:hover {
   border-color: white;
 }
 
+.placeContainer {
+  display: flex;
+  justify-content: center;
+
+}
 .places {
   display: inline-flex;
   flex-wrap: wrap;
   width: 90vw;
   justify-content: center;
+  margin: 0 auto;
 }
+
+
 .placesHeading{
   width: 100vw;
   text-align: center;
   font-size: 35px;
-
 }
 
 .place-card {
@@ -88,10 +94,20 @@ button:hover {
   font-size: 17px;
 }
 
+a {
+
+}
+a:hover {
+  color: #535bf2;
+}
 a{
   padding-left: 10px;
   padding-right: 10px;
   font-size: 20px;
+  font-weight: 500;
+  color:black;
+  text-decoration: inherit;
+  
 }
 
 .singlePlaceImage {
@@ -134,19 +150,66 @@ a{
   margin-bottom: 20px;
   margin-top: 10px;
 }
-
-.logoutButton {
-  justify-content: right;
-  
-}
-
-.appTitle {
-  width: 600px;
+.longBreakLine {
+  border-bottom: solid;
+  width: 400px;
   margin: 0 auto;
-  text-align: center;
- 
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+.registrationForm {
+  border:solid;
+  border-style: double;
+  border-width: thick;
+  width: 450px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  margin-top: 20px;
 }
 
+.registrationSuccessful {
+  font-size: 40px;
+}
+
+.accountPageButtons {
+  display: flex;
+  justify-content: space-between;
+  width: 380px;
+  margin: 0 auto;
+}
+.accountDetails {
+  font-size: 25px;
+}
+
+.accountHeading {
+  font-size: 30px;
+}
+
+.welcomeMessage {
+  font-size: 35px;
+}
+
+.loginHeading {
+  font-size: 30px;
+}
+.loginPageButtons {
+  display: flex;
+  justify-content: space-between;
+  width: 360px;
+  margin: 0 auto;
+}
+
+.loginForm {
+  margin-top: 15px;
+  border-style: double;
+  border-width: thick;
+  padding-bottom: 10px;
+}
+
+label {
+  padding-left: 10px;
+  padding-right: 10px;
+}
 
 
 @media (prefers-color-scheme: light) {

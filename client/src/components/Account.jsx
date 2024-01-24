@@ -26,37 +26,23 @@ export default function Account({ user, favorites }) {
   return (
 
     <div className="userInfo">
-      <h2 className="accountHeading">My Account Information:</h2>
+      <h2 className="welcomeMessage">Welcome Back, {`${user.first_name}`}!</h2>
+      <div className="breakLine"></div>
+      <h2 className="accountHeading">Account Information:</h2>
       <div className="accountDetails">
         <span>Name: {data.first_name} {data.last_name}</span><br />
-        <span>Username: {data.username}</span><br/> <br/> <br/>
-        {<h3> {`${user.first_name}`}'s Favorite Places</h3>}
-
-        {favorites?.map((favoritePlace) => (
-          <div key={favoritePlace.place_id} className="book-card">
-            <div className="place-image-container">
-              <img className="place-image" src={favoritePlace.img_url} />
-            </div>
-            <div className="place-details">
-              <span className="placeName">  {favoritePlace.place_name} </span> <br />
-             
-              <br />
-            </div>
-          </div>
-        ))}
-        {/* <span>Books Checked Out:</span>
-        <ul>
-          {data.books?.map((book) => <li key={book.id}> {book.title} </li>)}
-        </ul> */}
+        <span>Username: {data.username}</span><br/> <br/>
+        <div className="breakLine"></div>
 
       </div>
+      <br/>
       <div className="accountPageButtons">
         <button onClick={() => {
           navigate(`/places`)
-        }} >Back to Homepage</button>
+        }} >Back to All Places</button>
         <button onClick={() => {
           navigate(`/users/${user.user_id}/favorites`)
-        }} >Manage Favorites</button>
+        }} >My Favorites</button>
       </div>
     </div>
 

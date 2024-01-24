@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-export default function Register() {
+export default function Register({user, setUser}) {
   const [firstName, setFirstname] = useState("");
   const [lastName, setLastname] = useState("");
   const [username, setUsername] = useState("");
@@ -24,8 +24,8 @@ export default function Register() {
       setPassword("");
       setFirstname("");
       setLastname("");
+      setUser(result)
     } catch (error) {
-      setError(error.message);
     }
 
   }
@@ -33,13 +33,17 @@ export default function Register() {
   return (
 
     <div className="signUp">
-      <h2 className="registerHeading">Register</h2>
-      <div className="errorMessage">
-        {error && <p>{error}</p>}
-      </div>
+        { user.user_id?
+        <div className="registrationPageButtons">
+          <h2 className="registrationSuccessful">Registration successful!</h2>
+          <button onClick={() => {
+            navigate(`/account`)
+          }}>Go to Account</button>
 
+        </div>
+        :
       <form className="registrationForm" onSubmit={handleSubmit}>
-
+        <h2 className="registerHeading">Register</h2>
         <label>
           First Name:<input value={firstName} onChange={(event) => setFirstname(event.target.value)} /> <br/>
         </label>
@@ -54,18 +58,8 @@ export default function Register() {
         </label>
         <button className="submitButton">Submit</button> 
        
-      </form>
+      </form> }
 
-      {
-        <div className="registrationPageButtons">
-          {/* <button onClick={() => {
-            navigate(`/account`)
-          }}>Go to Account</button> */}
-          <button onClick={() => {
-            navigate(`/places`)
-          }}>Search for Books</button>
-        </div>
-        }
     </div>
   );
 };

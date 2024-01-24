@@ -20,11 +20,11 @@ const Places = () => {
   }
 
   return (
-    <div>
+    <div className="placeContainer">
 
       <div className="places">
 
-        <h1 className="placesHeading">Choose your adventure...</h1>
+        <h1 className="placesHeading"></h1>
 
         {data.map((place) => (
           <div key={place.place_id} className="place-card">
