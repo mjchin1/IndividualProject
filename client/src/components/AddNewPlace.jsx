@@ -9,12 +9,12 @@ export default function addNewPlace() {
   const [description, setDescription] = useState("")
   const [locationType, setLocationType] = useState("")
   const [neighborhood, setNeighborhood] = useState("")
+  const [website, setWebsite] = useState("")
   const [addPlace] = useAddPlaceMutation();
- 
 
   function handleSubmit(event) {
     event.preventDefault();
-    addPlace(JSON.stringify({
+    const body = (JSON.stringify({
       placeName,
       address,
       hours,
@@ -22,12 +22,14 @@ export default function addNewPlace() {
       description,
       locationType,
       neighborhood,
+      website,
     }));
+    addPlace(body);
 };
 
 return (
   <div>
-    <h2 className="loginHeading">Submit a Beautiful Place</h2>
+    <h2 className="loginHeading">Submit a Hidden Gem</h2>
     
     <form className="loginForm"onSubmit={handleSubmit}>
       <label>
@@ -50,6 +52,9 @@ return (
       </label><br/>
       <label>
         Neighborhood <input value={neighborhood} onChange={(event) => setNeighborhood(event.target.value)} />
+      </label><br/>
+      <label>
+        Website <input value={website} onChange={(event) => setWebsite(event.target.value)} />
       </label><br/>
   
       <button className="submitButton"

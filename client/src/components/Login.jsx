@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import LogoutButton from './LogoutButton';
 
 
 export default function Login({ setUser, user}) {
@@ -28,7 +27,6 @@ export default function Login({ setUser, user}) {
       setUsername("");
       setPassword("");
     } catch (error) {
-     console.log("Error")
     }
 
   }
@@ -49,7 +47,6 @@ export default function Login({ setUser, user}) {
         >Submit</button>
 
       </form>
-
       {user.user_id ? <> <h1 className="successMessage">Success! You are now logged in. </h1>
       
         <div className="loginPageButtons">
@@ -58,10 +55,8 @@ export default function Login({ setUser, user}) {
         }}>Go to Account</button>
 
         <button onClick={() => {
-          navigate(`/books`);
-        }}>Search for Books</button> 
-
-        <LogoutButton setUser={setUser} />
+          navigate(`/places`);
+        }}>Back to All Places</button> 
 
         </div>
         

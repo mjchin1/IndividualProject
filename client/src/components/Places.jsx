@@ -3,6 +3,7 @@ import { useFetchPlacesQuery } from '../api/placesAPI.js';
 import { useNavigate } from 'react-router-dom';
 
 
+
 const Places = () => {
   const { data = [], error, isLoading } = useFetchPlacesQuery();
   const navigate = useNavigate();
@@ -23,21 +24,20 @@ const Places = () => {
 
       <div className="places">
 
-        <h1 className="placesHeading">Our Beautiful Places</h1>
+        <h1 className="placesHeading">Choose your adventure...</h1>
 
         {data.map((place) => (
-          <div key={place.id} className="place-card">
+          <div key={place.place_id} className="place-card">
             <div className="place-image-container">
-              <img className="place-image" src={place.img_url} />
-            </div>
+                <img className="place-image" src={place.img_url} /> <br/>
+            </div> 
             <div className="place-details">
-              <span className="placeName">  {place.place_name} | {place.address} </span> <br />
-              <span> {place.description} </span> <br></br><br></br>
+              <span className="placeName">  {place.place_name} </span> <br />
+        
               <button onClick={() => {
                 navigate(`/places/${place.place_id}`)
               }} >More Info </button>
             </div>
-            <div className="breakLine"></div>
           </div>
 
         ))}

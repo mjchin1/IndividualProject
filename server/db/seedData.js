@@ -9,9 +9,10 @@ const places = [
     imgUrl:
       "https://images.squarespace-cdn.com/content/v1/5307d892e4b023a01adef0d0/1541427658386-D8ZHCZV2RN4KHT3WZKM8/4LW_Photo_JudeGoergen8261.jpg?format=2500w",
     description:
-      "A beautiful cafe that focuses on sustainably-sourced artisinal coffee blends.",
+      "A beautiful Avondale cafe that is prized for its beautiful design and sustainably-sourced artisinal coffee blends.",
     locationType: "Cafe",
     neighborhood: "Avondale",
+    website: "https://www.4lwcoffee.com/",
   },
 
   {
@@ -24,6 +25,33 @@ const places = [
       "An Art Deco-themed cafe that makes you feel like you've traveled back in time.",
     locationType: "Cafe",
     neighborhood: "Lincoln Park",
+    website: "https://cafedeko.com/",
+  },
+
+  {
+    placeName: "Living Water Tea House",
+    address: "1453 W Taylor St, Chicago, IL 60607",
+    hours: "12:00pm-7:00pm daily",
+    imgUrl:
+      "https://cdn.vox-cdn.com/thumbor/Tu6CwLVDOgesKLTlN3gEKgOsLuo=/0x0:6016x4016/1200x0/filters:focal(0x0:6016x4016):no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/21852162/Interior_1.jpg",
+    description:
+      "A serene tea space with soft lighting and handmade pottery as decor.",
+    locationType: "Tea Room",
+    neighborhood: "Near West Side",
+    website: "https://www.livingwaterteahouse.com/",
+  },
+
+  {
+    placeName: "Maison Marcel",
+    address: "3114 N Broadway, Chicago, IL 60657",
+    hours: "Monday-Friday: 7:00am-3:00pm, Saturday-Sunday: 7:00am-4:00pm",
+    imgUrl:
+      "https://chicagoeventvenues.com/wp-content/uploads/2022/03/DSC05318-2-scaled.jpg",
+    description:
+      "A beautifully-lit French cafe that feels like a bright summer day.",
+    locationType: "Cafe",
+    neighborhood: "Lakeview",
+    website: "https://maison-marcel.com/",
   },
 
   {
@@ -37,18 +65,20 @@ const places = [
       "A Regal, vintage escape nestled into the Chicago Athletic Association Hotel's lobby.",
     locationType: "Hotel",
     neighborhood: "The Loop",
+    website: "https://www.lsdatcaa.com/drawing-room",
   },
 
   {
-    placeName: "Maison Marcel",
-    address: "3114 N Broadway, Chicago, IL 60657",
-    hours: "Monday-Friday: 7:00am-3:00pm, Saturday-Sunday: 7:00am-4:00pm",
+    placeName: "The Rookery",
+    address: "209 S La Salle St, Chicago, IL 60604",
+    hours: "Monday-Thursday: 6:00am-6:00pm, Saturday: 8:00am-2:00pm",
     imgUrl:
-      "https://chicagoeventvenues.com/wp-content/uploads/2022/03/DSC05318-2-scaled.jpg",
+      "https://images.squarespace-cdn.com/content/v1/5b27c803f93fd453d058584f/1533760372613-PYB6BSOVX5BBBM8WY6VM/03_Shwartz_rookery4.jpg",
     description:
-      "A beautifully-lit French cafe that feels like a bright summer day.",
-    locationType: "Cafe",
-    neighborhood: "Lakeview",
+      "A historic gem in the midst of some of Chicago's most iconic buildings.",
+    locationType: "Office Building",
+    neighborhood: "The Loop",
+    website: "https://www.therookerybuilding.com/contact",
   },
 
   {
@@ -62,17 +92,8 @@ const places = [
       "A hidden gem located on the top floor of Chicago's largest public library.",
     locationType: "Library",
     neighborhood: "The Loop",
-  },
-
-  {
-    placeName: "Garfield Park Conservatory",
-    address: "300 N Central Park Ave, Chicago, IL 60624",
-    hours: "Wednesday: 10:00am-8:00pm, Thursday-Sunday: 10:00am-5:00pm",
-    imgUrl: "https://live.staticflickr.com/423/19183400310_7c07960b81_c.jpg",
-    description:
-      "A tropical escape filled with exotic plants and gorgeous koi ponds.",
-    locationType: "Park",
-    neighborhood: "Garfield Park",
+    website:
+      "https://www.chipublib.org/news/your-new-favorite-study-space-winter-garden-at-harold-washington-library-center/",
   },
 
   {
@@ -84,6 +105,19 @@ const places = [
     description: "A beloved cafe on the University of Chicago's campus.",
     locationType: "Cafe",
     neighborhood: "Hyde Park",
+    website: "https://www.pleinaircafe.co/",
+  },
+
+  {
+    placeName: "Garfield Park Conservatory",
+    address: "300 N Central Park Ave, Chicago, IL 60624",
+    hours: "Wednesday: 10:00am-8:00pm, Thursday-Sunday: 10:00am-5:00pm",
+    imgUrl: "https://live.staticflickr.com/423/19183400310_7c07960b81_c.jpg",
+    description:
+      "A tropical escape filled with exotic plants and gorgeous koi ponds.",
+    locationType: "Park",
+    neighborhood: "Garfield Park",
+    website: "https://garfieldconservatory.org/",
   },
 
   {
@@ -96,6 +130,8 @@ const places = [
       "A classically beautiful space on the grounds of Columbus Park.",
     locationType: "Park",
     neighborhood: "Austin",
+    website:
+      "https://www.chicagoparkdistrict.com/parks-facilities/columbus-refectory",
   },
 
   {
@@ -108,6 +144,7 @@ const places = [
       "A serene garden that was first built by the Japanese government as a gift to the city of Chicago in 1893.",
     locationType: "Park",
     neighborhood: "Hyde Park",
+    website: "https://www.gardenofthephoenix.org/",
   },
 
   {
@@ -119,6 +156,7 @@ const places = [
     description: "A cozy cafe tucked away in a beautiful brick alley.",
     locationType: "Cafe",
     neighborhood: "The Loop",
+    website: "https://www.herocoffeebars.com/",
   },
 
   {
@@ -130,6 +168,7 @@ const places = [
     description: "A historical landmark with beautiful recent renovations.",
     locationType: "Office Building",
     neighborhood: "West Loop",
+    website: "https://post433.com/",
   },
 
   {
@@ -142,18 +181,7 @@ const places = [
       "A stunning industrial building with artist studios, galleries, and a cafe.",
     locationType: "Art Building",
     neighborhood: "Bridgeport",
-  },
-
-  {
-    placeName: "The Rookery",
-    address: "209 S La Salle St, Chicago, IL 60604",
-    hours: "Monday-Thursday: 6:00am-6:00pm, Saturday: 8:00am-2:00pm",
-    imgUrl:
-      "https://images.squarespace-cdn.com/content/v1/5b27c803f93fd453d058584f/1533760372613-PYB6BSOVX5BBBM8WY6VM/03_Shwartz_rookery4.jpg",
-    description:
-      "A historic gem in the midst of some of Chicago's most iconic buildings.",
-    locationType: "Office Building",
-    neighborhood: "The Loop",
+    website: "https://www.bridgeportart.com/explore/",
   },
 
   {
@@ -165,6 +193,8 @@ const places = [
     description: "A cozy cafe with mezmerizing design details.",
     locationType: "Cafe",
     neighborhood: "West Town",
+    website:
+      "https://www.bonappetit.com/city-guides/chicago/venue/caffe-streets",
   },
 
   {
@@ -176,18 +206,7 @@ const places = [
       "A free photography museum on the campus of Columbia College Chicago.",
     locationType: "Museum",
     neighborhood: "The Loop",
-  },
-
-  {
-    placeName: "Living Water Tea House",
-    address: "1453 W Taylor St, Chicago, IL 60607",
-    hours: "12:00pm-7:00pm daily",
-    imgUrl:
-      "https://cdn.vox-cdn.com/thumbor/Tu6CwLVDOgesKLTlN3gEKgOsLuo=/0x0:6016x4016/1200x0/filters:focal(0x0:6016x4016):no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/21852162/Interior_1.jpg",
-    description:
-      "A serene tea space with soft lighting and handmade pottery as decor.",
-    locationType: "Tea Room",
-    neighborhood: "Near West Side",
+    website: "https://www.mocp.org/",
   },
 
   {
@@ -199,6 +218,7 @@ const places = [
     description: "A sunlit escape right off of Michigan Avenue.",
     locationType: "Cafe",
     neighborhood: "The Loop",
+    website: "https://venteuxchicago.com/cafe/",
   },
 
   {
@@ -211,6 +231,7 @@ const places = [
       "One of Chicago's most historic, classically beautiful hotel lobbies.",
     locationType: "Hotel",
     neighborhood: "The Loop",
+    website: "https://www.palmerhousehiltonhotel.com/about-our-hotel/",
   },
 
   {
@@ -223,6 +244,8 @@ const places = [
       "A stunning example of Neoclassical architecture in the heart of downtown Chicago.",
     locationType: "Museum",
     neighborhood: "The Loop",
+    website:
+      "https://www.chicago.gov/city/en/depts/dca/supp_info/chicago_culturalcenter.html",
   },
 
   {
@@ -235,6 +258,8 @@ const places = [
       "A former bank transformed by artist Theaster Gates into a breathtaking public art/community space.",
     locationType: "Community Space",
     neighborhood: "Woodlawn",
+    website:
+      "https://www.theastergates.com/project-items/stony-island-arts-bank",
   },
 ];
 

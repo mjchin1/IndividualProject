@@ -40,14 +40,15 @@ async function createPlace(body) {
     description,
     locationType,
     neighborhood,
+    website,
   } = body;
   try {
     const {
       rows: [place],
     } = await client.query(
       `
-          INSERT INTO places(place_name, address, hours, img_url, description, location_type, neighborhood)
-          VALUES($1, $2, $3, $4, $5, $6, $7)
+          INSERT INTO places(place_name, address, hours, img_url, description, location_type, neighborhood, website)
+          VALUES($1, $2, $3, $4, $5, $6, $7, $8)
           RETURNING *;
       `,
       [
@@ -58,6 +59,7 @@ async function createPlace(body) {
         description,
         locationType,
         neighborhood,
+        website,
       ]
     );
     return place;

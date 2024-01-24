@@ -33,31 +33,120 @@ body {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  font-family: Andale mono, monospace;
 }
 
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
+  border-radius:8px;
+  border: solid;
+  border-style: double;
+  border-width: thick;
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
   cursor: pointer;
+  margin-top: 10px;
+  background-color: white;
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  border-color: white;
 }
 
+.places {
+  display: inline-flex;
+  flex-wrap: wrap;
+  width: 90vw;
+  justify-content: center;
+}
+.placesHeading{
+  width: 100vw;
+  text-align: center;
+  font-size: 35px;
+
+}
+
+.place-card {
+  border: solid;
+  border-style: double;
+  border-width: thick;
+  justify-content: space-between;
+  height: 315px;
+  width: 325px;
+  padding-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
 .place-image {
   height: 200px;
   width: auto;
 }
+
+.webLink {
+  font-size: 17px;
+}
+
+a{
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 20px;
+}
+
+.singlePlaceImage {
+  height: 400px;
+  width: auto;
+}
+.singlePlaceName {
+  font-size: 45px;
+}
+.singlePlaceCard {
+  border-style: double;
+  border-width: thick;
+  padding: 30px;
+  margin-top: 20px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.singlePlacePageButtons {
+  display: inline-flex;
+  justify-content: space-around;
+  width: 550px;
+}
+.singlePlaceDetails {
+  font-size: 20px;
+}
+.placeDescription {
+  width: 400px;
+  margin: 0 auto;
+  text-align: center;
+
+}
+.loginPrompt {
+  font-weight: 650;
+}
+.breakLine {
+  border-bottom: solid;
+  width: 200px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.logoutButton {
+  justify-content: right;
+  
+}
+
+.appTitle {
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+ 
+}
+
 
 
 @media (prefers-color-scheme: light) {
@@ -69,6 +158,6 @@ button:focus-visible {
     color: #747bff;
   }
   button {
-    background-color: #f9f9f9;
+    background-color: white;
   }
 }

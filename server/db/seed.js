@@ -27,13 +27,14 @@ const createTables = async () => {
     await client.query(`
         CREATE TABLE places (
             place_id SERIAL PRIMARY KEY,
-            place_name TEXT NOT NULL,
-            address TEXT NOT NULL,
-            hours TEXT NOT NULL,
-            img_url TEXT NOT NULL,
-            description TEXT NOT NULL,
-            location_type TEXT NOT NULL,
-            neighborhood TEXT NOT NULL
+            place_name TEXT,
+            address TEXT,
+            hours TEXT,
+            img_url TEXT,
+            description TEXT,
+            location_type TEXT,
+            neighborhood TEXT,
+            website TEXT
         );
        
         CREATE TABLE users (
@@ -65,8 +66,8 @@ const createInitialPlaces = async () => {
       // console.log(typeName)
       await client.query(
         `
-                INSERT INTO places(place_name, address, hours, img_url, description, location_type, neighborhood)
-                VALUES($1, $2, $3, $4, $5, $6, $7);
+                INSERT INTO places(place_name, address, hours, img_url, description, location_type, neighborhood, website)
+                VALUES($1, $2, $3, $4, $5, $6, $7, $8);
             `,
         [
           place.placeName,
@@ -76,6 +77,7 @@ const createInitialPlaces = async () => {
           place.description,
           place.locationType,
           place.neighborhood,
+          place.website,
         ]
       );
     }

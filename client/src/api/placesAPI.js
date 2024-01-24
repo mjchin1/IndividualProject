@@ -34,6 +34,15 @@ export const placesApi = createApi({
       }),
       invalidatesTags: ["Place"],
     }),
+
+    deletePlace: builder.mutation({
+      query: (id) => ({
+        url: `places/${id}`,
+        method: "DELETE",
+      }),
+      invalidatesTags: ["Place"],
+    }),
+
     // The part of the URL that comes after the baseUrl for this specific endpoint
   }),
 });
@@ -43,4 +52,5 @@ export const {
   useFetchPlacesQuery,
   useFetchSinglePlaceQuery,
   useAddPlaceMutation,
+  useDeletePlaceMutation,
 } = placesApi;

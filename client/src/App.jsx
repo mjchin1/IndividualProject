@@ -8,6 +8,7 @@ import Navigations from './components/Navigations';
 import Register from './components/Register';
 import Login from './components/Login';
 import Favorites from './components/Favorites';
+import LogoutButton from './components/LogoutButton';
 import LogoutPage from './components/LogoutPage';
 import Account from './components/Account';
 import AddNewPlace from './components/AddNewPlace';
@@ -17,8 +18,12 @@ function App() {
   const [favorites, setFavorites] = useState([]);
   return (
     <div className='app'>
-      <h1 id='appHeading'>THIS BEAUTIFUL PLACE</h1>
-      <Navigations user = {user}/>
+      <span className='appHeading'>
+      <h1 className="appTitle" >THE FIELD TRIP</h1>
+      </span>
+      <h2> A Directory of Chicago's most beautifully unique locations.</h2>
+      <Navigations className="navBar" user = {user}/>
+      {user.user_id? <LogoutButton className="logoutButton" user={user} setUser={setUser}/>: null}
        <div className='App'>
         <Routes>
           <Route path="/" element={<Places/>}/>
