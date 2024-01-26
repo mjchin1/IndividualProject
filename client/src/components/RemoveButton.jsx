@@ -21,7 +21,7 @@ export default function RemoveButton({ favoritePlace,favorites, setFavorites }) 
     <div className="removeButton">
       <button onClick={() => {
         handleClick();
-      }}>Remove Favorite</button>
+      }}>Remove from Favorites</button>
     </div>
   );
 };

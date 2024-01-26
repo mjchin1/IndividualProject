@@ -12,6 +12,7 @@ export default function FavoriteButton({ userId, placeId, setFavorites }) {
       const result = await response.json();
       setFavorites(result);
       console.log(result)
+      
 
     } catch (error) {
     };
@@ -21,6 +22,7 @@ return (
   <div className="favoriteButton">
     <button onClick={() => {
     handleClick();
+    alert("This place has been added to your favorites.")
     }}>Add to Favorites</button>
   </div>
 );

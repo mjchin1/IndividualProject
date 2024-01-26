@@ -32,10 +32,28 @@ export default function Login({ setUser, user}) {
   }
 
   return (
+    <>
+    <br/>
     <div className="loginPage">
 
-      <form className="loginForm"onSubmit={handleSubmit}>
+      {user.user_id ? <> <h1 className="loginMessage"> Welcome back, {`${user.first_name}`}!</h1>
+      
+        <div className="loginPageButtons">
+        <button onClick={() => {
+          navigate(`/account`);
+        }}>Go to Account</button>
+
+        <button onClick={() => {
+          navigate(`/places`);
+        }}>Explore Locations</button> 
+
+        </div>
+        
+        </>
+        :       
+        <form className="loginForm"onSubmit={handleSubmit}>
         <h2 className="loginHeading">Log In</h2>
+        <span>Already have an account? Log in below.</span> <br/> <br/>
         <label>
           Username:<input value={username} onChange={(event) => setUsername(event.target.value)} />
         </label>
@@ -45,27 +63,10 @@ export default function Login({ setUser, user}) {
         <button className="submitButton"
         >Submit</button>
 
-      </form>
-      {user.user_id ? <> <h1 className="successMessage"> Welcome back, {`${user.first_name}`}!</h1>
-      
-        <div className="loginPageButtons">
-        <button onClick={() => {
-          navigate(`/account`);
-        }}>Go to Account</button>
-
-        <button onClick={() => {
-          navigate(`/places`);
-        }}>Back to All Places</button> 
-
-        </div>
-        
-        </>
-        : null}
-
-
+      </form>}
 
     </div>
-
+      </>
 
   );
 };

@@ -20,6 +20,9 @@ export default function SinglePlace({userId}) {
   }
   console.log(data)
   return (
+
+    <>
+    <br/>
     <div className="singlePlaceContainer">
       
       <div key={data.place_id} className="singlePlaceCard">
@@ -33,7 +36,7 @@ export default function SinglePlace({userId}) {
          
           <span>  {data.address} </span> <br/> 
           <span> Hours: {data.hours} </span> <br/>
-          <a className="webLink" target="_blank" href={data.website}> Website </a> <br/> <br/>
+          <a className="webLink" target="_blank" href={data.website}> Visit Website </a> <br/> <br/>
         </div>
      
         <div className="placeDescription"> {data.description} </div> <br/>
@@ -41,7 +44,7 @@ export default function SinglePlace({userId}) {
         <div className="singlePlacePageButtons">
           <button className="backButton" onClick={() => {
             navigate(`/places`)
-          }} >Back to All Places</button>
+          }} >Back to All Locations</button>
           {userId? <FavoriteButton className="favoriteButton" userId = {userId} placeId = {data.place_id}/> :null}
           {userId? <DeletePlaceButton className="delete-button" id = {id} /> :null}
 
@@ -52,6 +55,8 @@ export default function SinglePlace({userId}) {
         <br/><br/>
       
     </div>
+
+    </>
   );
 };
 

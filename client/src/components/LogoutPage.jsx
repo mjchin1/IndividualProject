@@ -6,8 +6,8 @@ export default function LogoutPage() {
 
   return (
     <div className="logoutPage">
-      <h1>You have been logged out.</h1>
-      <h1>Thank you, please come again!</h1>
+      <h1 className="logoutMessage">You have been logged out.</h1>
+      <h1 className="logoutMessage">Thank you, please come again!</h1>
       <button className="logoutPageButton" onClick={() => {
         navigate("/places");
       }}>Back to Homepage</button>

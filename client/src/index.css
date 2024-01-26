@@ -24,10 +24,34 @@ body {
 }
 
 .appTitle {
-  width: 600px;
+  width: 800px;
   margin: 0 auto;
   text-align: center;
+  padding-top: 50px;
+  font-size: 90px;
+  font-weight: 900;
+  opacity: 1;
 }
+.subTitle {
+  font-size: 30px;
+
+}
+
+.appHeading {
+  margin: 0 auto;
+  width: 1000px;
+  background-image: url("https://eadn-wc01-8440685.nxedge.io/wp-content/uploads/2023/06/Untitled-design-2023-06-21T161612.623.jpg");
+  height: 350px;
+  display: flex;
+  justify-content: space-around;
+}
+.appHeadingText {
+  margin-top: 70px;
+  width: 800px;
+  height: 250px;
+  color: white; 
+}
+
 
 h1 {
   font-size: 3.2em;
@@ -84,10 +108,17 @@ button:hover {
   margin-left: 10px;
   margin-right: 10px;
   margin-bottom: 20px;
+  background: white;
 }
 .place-image {
   height: 200px;
   width: auto;
+  max-width: 93%;
+}
+
+.placeName {
+  
+  font-size: 18px;
 }
 
 .webLink {
@@ -121,9 +152,11 @@ a{
   border-style: double;
   border-width: thick;
   padding: 30px;
-  margin-top: 20px;
   padding-left: 100px;
   padding-right: 100px;
+  background: white;
+  width: 700px;
+  margin: 0 auto;
 }
 
 .singlePlacePageButtons {
@@ -161,10 +194,12 @@ a{
   border:solid;
   border-style: double;
   border-width: thick;
-  width: 450px;
+  width: 470px;
   margin: 0 auto;
   padding-bottom: 20px;
   margin-top: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .registrationSuccessful {
@@ -174,7 +209,7 @@ a{
 .accountPageButtons {
   display: flex;
   justify-content: space-between;
-  width: 380px;
+  width: 340px;
   margin: 0 auto;
 }
 .accountDetails {
@@ -190,7 +225,7 @@ a{
 }
 
 .loginHeading {
-  font-size: 30px;
+  font-size: 25px;
 }
 .loginPageButtons {
   display: flex;
@@ -204,12 +239,62 @@ a{
   border-style: double;
   border-width: thick;
   padding-bottom: 10px;
+  width: 300px;
+  margin: 0 auto;
 }
 
 label {
   padding-left: 10px;
   padding-right: 10px;
 }
+
+.submitButton {
+  margin-right: 10px;
+}
+
+.favoritePlaceName{
+  font-size: 25px;
+}
+
+.submitPlaceForm {
+  border-style: double;
+  border-width: thick;
+  padding-bottom: 10px;
+  width: 600px;
+  margin: 0 auto;
+}
+.submitPrompt {
+  width:600px;
+  font-size: 17px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.favoritesContainer {
+  border: double;
+  border-width:thick;
+  width: 75vw;
+  margin: 0 auto;
+}
+
+.favoritesHeading {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+.placesHeading {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: 550;
+  font-size: 50px;
+}
+
+
+.logoutMessage {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+.loginMessage {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
 
 
 @media (prefers-color-scheme: light) {

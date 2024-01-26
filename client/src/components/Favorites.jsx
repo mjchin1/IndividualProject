@@ -35,33 +35,38 @@ export default function Favorites({ user, favorites, setFavorites }) {
     </>)
   }
   return (
-
-    <div className="books">
-      <h1 className="reservationsHeading">My Favorite Places</h1>
+    <>
+    <br/>
+    <div className="favoritesContainer">
+      <h1 className="favoritesHeading">{`${user.first_name}`}'s Favorite Places</h1>
       <>
         {favorites.map((favoritePlace) => (
-          <div key={favoritePlace.place_id} className="book-card">
+          <>
+          <div key={favoritePlace.place_id} className="favorite-card">
             <div className="place-image-container">
               <img className="place-image" src={favoritePlace.img_url} />
             </div>
             <div className="place-details">
-              <span className="placeName">  {favoritePlace.place_name} </span> <br />
+              <span className="favoritePlaceName">  {favoritePlace.place_name} </span> <br />
 
-
-              <span> {favoritePlace.description} </span> <br></br><br></br>
               <RemoveButton
                 favorites={favorites}
                 favoritePlace={favoritePlace}
                 setFavorites={setFavorites}
               />
               <br />
-              <div className="longBreakLine"></div>
-              <br/>
+              
+             
             </div>
           </div>
+          <div className="longBreakLine"></div>
+          <br/>
+          </>
         ))}
 
       </>
     </div>
+
+    </>
   );
 };

@@ -20,12 +20,15 @@ const Places = () => {
   }
 
   return (
+
+    <>
+    <div className="breakLine"></div>
     <div className="placeContainer">
-
+        
       <div className="places">
-
-        <h1 className="placesHeading"></h1>
-
+    <br/>
+        <h1 className="placesHeading"> Let's explore. </h1> <br/> <br/>
+        
         {data.map((place) => (
           <div key={place.place_id} className="place-card">
             <div className="place-image-container">
@@ -45,6 +48,8 @@ const Places = () => {
       </div>
 
     </div>
+
+    </>
   );
 };
 

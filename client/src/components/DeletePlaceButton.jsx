@@ -8,7 +8,7 @@ export default function DeletePlaceButton({id}) {
 
   function handleClick() {
     deletePlace(id)
-    alert("You have deleted this place.")
+    alert("You have deleted this location.")
 };
 
 return (
@@ -17,7 +17,7 @@ return (
       handleClick()
       navigate(`/places`)
       }}>
-      Delete Place
+      Delete Location
     </button>
   </div>
 );

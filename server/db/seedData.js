@@ -82,26 +82,25 @@ const places = [
   },
 
   {
-    placeName: "The Winter Garden at Harold Washington Library",
+    placeName: "The Winter Garden",
     address: "400 S State St, Chicago, IL 60605",
     hours:
       "Tuesday-Thursday: 9:00am-8:00pm, Friday-Saturday: 9:00am-5:00pm,Sunday: 1:00pm-5:00pm",
     imgUrl:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjpjKnPCN5PiTt8TWs4mPbRbAzTEQ1p7KOgg&usqp=CAU",
+      "https://americanlibrariesmagazine.org/wp-content/uploads/2017/05/btn1.jpg",
     description:
       "A hidden gem located on the top floor of Chicago's largest public library.",
     locationType: "Library",
     neighborhood: "The Loop",
     website:
-      "https://www.chipublib.org/news/your-new-favorite-study-space-winter-garden-at-harold-washington-library-center/",
+      "https://americanlibrariesmagazine.org/wp-content/uploads/2017/05/btn1.jpg",
   },
 
   {
     placeName: "Plein Air Cafe",
     address: "5751 S Woodlawn Ave, Chicago, IL 60637",
     hours: "Monday-Friday: 7:00am-8:00pm, Saturday-Sunday: 8:00am-6:00pm",
-    imgUrl:
-      "https://res.cloudinary.com/the-infatuation/image/upload/v1657762907/cms/guides/end-of-year-team-dinner/JACKLI-CHI-VIRTUE-SPACES-4.jpg",
+    imgUrl: "https://dailycoffeenews.com/wp-content/uploads/2014/04/l-2.jpg",
     description: "A beloved cafe on the University of Chicago's campus.",
     locationType: "Cafe",
     neighborhood: "Hyde Park",
@@ -109,10 +108,23 @@ const places = [
   },
 
   {
+    placeName: "Venteux",
+    address: "224 N Michigan Ave, Chicago, IL 60601",
+    hours: "Monday-Saturday: 7:00am-9:00pm, Sunday: 7:00am-4:00pm",
+    imgUrl:
+      "https://uploads.pendry.com/redesign/wp-content/uploads/sites/10/2023/09/15154806/JacobHand_AndysFavoriteCafeVenteux_7-3000x2001-849a82a-scaled.jpg",
+    description: "A sunlit escape right off of Michigan Avenue.",
+    locationType: "Cafe",
+    neighborhood: "The Loop",
+    website: "https://venteuxchicago.com/cafe/",
+  },
+
+  {
     placeName: "Garfield Park Conservatory",
     address: "300 N Central Park Ave, Chicago, IL 60624",
     hours: "Wednesday: 10:00am-8:00pm, Thursday-Sunday: 10:00am-5:00pm",
-    imgUrl: "https://live.staticflickr.com/423/19183400310_7c07960b81_c.jpg",
+    imgUrl:
+      "https://s3.amazonaws.com/architecture-org/files/modules/garfield-pk-conservatory-eric-allix-rogers-01.jpg",
     description:
       "A tropical escape filled with exotic plants and gorgeous koi ponds.",
     locationType: "Park",
@@ -148,6 +160,31 @@ const places = [
   },
 
   {
+    placeName: "The Old Post Office",
+    address: "433 W Van Buren St, Chicago, IL 60607",
+    hours: "Monday-Friday: 7:00am-6:00pm",
+    imgUrl:
+      "https://media-api.xogrp.com/images/6d89b688-bbd9-4cc9-a14e-ef64f6cd575a",
+    description:
+      "A former post office, originally built in 1921, that has recently reopened after extensive renovations.",
+    locationType: "Office Building",
+    neighborhood: "West Loop",
+    website: "https://post433.com/",
+  },
+  {
+    placeName: "Caffè Streets",
+    address: "1750 W Division St, Chicago, IL 60622",
+    hours: "7:00am-3:00pm daily",
+    imgUrl:
+      "https://res.cloudinary.com/the-infatuation/image/upload/q_auto,f_auto/CaffeStreets_Interior_DerrickKoch_Chicago_q98m9x",
+    description: "A cozy cafe with mezmerizing design details.",
+    locationType: "Cafe",
+    neighborhood: "West Town",
+    website:
+      "https://www.bonappetit.com/city-guides/chicago/venue/caffe-streets",
+  },
+
+  {
     placeName: "Hero Coffee Bar",
     address: "22 E Jackson Blvd, Chicago, IL 60604",
     hours: "Monday-Saturday: 8:00am-3:00pm",
@@ -157,18 +194,6 @@ const places = [
     locationType: "Cafe",
     neighborhood: "The Loop",
     website: "https://www.herocoffeebars.com/",
-  },
-
-  {
-    placeName: "The Old Post Office",
-    address: "433 W Van Buren St, Chicago, IL 60607",
-    hours: "Monday-Friday: 7:00am-6:00pm",
-    imgUrl:
-      "https://media-api.xogrp.com/images/6d89b688-bbd9-4cc9-a14e-ef64f6cd575a",
-    description: "A historical landmark with beautiful recent renovations.",
-    locationType: "Office Building",
-    neighborhood: "West Loop",
-    website: "https://post433.com/",
   },
 
   {
@@ -185,19 +210,6 @@ const places = [
   },
 
   {
-    placeName: "Caffè Streets",
-    address: "1750 W Division St, Chicago, IL 60622",
-    hours: "7:00am-3:00pm daily",
-    imgUrl:
-      "https://lh3.googleusercontent.com/p/AF1QipOQKDozoSe26-s9EoIrYt3xxWrkJsnAKIMcBRsT=s1360-w1360-h1020",
-    description: "A cozy cafe with mezmerizing design details.",
-    locationType: "Cafe",
-    neighborhood: "West Town",
-    website:
-      "https://www.bonappetit.com/city-guides/chicago/venue/caffe-streets",
-  },
-
-  {
     placeName: "Museum of Contemporary Photography",
     address: "600 S Michigan Ave, Chicago, IL 60605",
     hours: "Monday-Saturday: 10:00am-5:00pm, Sunday: 12:00pm to 5:00pm",
@@ -210,23 +222,11 @@ const places = [
   },
 
   {
-    placeName: "Venteux",
-    address: "224 N Michigan Ave, Chicago, IL 60601",
-    hours: "Monday-Saturday: 7:00am-9:00pm, Sunday: 7:00am-4:00pm",
-    imgUrl:
-      "https://coffeewithdamian.com/wp-content/uploads/2022/07/Venteux-Chicago-3-800x1000.jpg",
-    description: "A sunlit escape right off of Michigan Avenue.",
-    locationType: "Cafe",
-    neighborhood: "The Loop",
-    website: "https://venteuxchicago.com/cafe/",
-  },
-
-  {
     placeName: "The Lobby at the Palmer House Hotel",
     address: "17 E Monroe St, Chicago, IL 60603",
     hours: "Open 24 hours",
     imgUrl:
-      "https://holeinthedonut.com/wp-content/uploads/2009/08/Palmer_House_Hilton_lobby.jpg",
+      "https://s3.amazonaws.com/architecture-org/files/modules/palmer-house-courtesy-of-site-03.jpg",
     description:
       "One of Chicago's most historic, classically beautiful hotel lobbies.",
     locationType: "Hotel",

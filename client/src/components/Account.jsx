@@ -26,7 +26,7 @@ export default function Account({ user, favorites }) {
   return (
 
     <div className="userInfo">
-      <h2 className="welcomeMessage">Welcome Back, {`${user.first_name}`}!</h2>
+      <h2 className="welcomeMessage">Hello, {`${user.first_name}`}!</h2>
       <div className="breakLine"></div>
       <h2 className="accountHeading">Account Information:</h2>
       <div className="accountDetails">
@@ -37,12 +37,13 @@ export default function Account({ user, favorites }) {
       </div>
       <br/>
       <div className="accountPageButtons">
-        <button onClick={() => {
-          navigate(`/places`)
-        }} >Back to All Places</button>
-        <button onClick={() => {
+      <button onClick={() => {
           navigate(`/users/${user.user_id}/favorites`)
         }} >My Favorites</button>
+        <button onClick={() => {
+          navigate(`/places`)
+        }} >Explore Locations</button>
+       
       </div>
     </div>
 

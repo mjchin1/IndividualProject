@@ -18,12 +18,17 @@ function App() {
   const [favorites, setFavorites] = useState([]);
   return (
     <div className='app'>
-      <span className='appHeading'>
-      <h1 className="appTitle" >THE FIELD TRIP</h1>
-      </span>
-      <h2> A Directory of Chicago's most beautifully unique locations.</h2>
+      <div className='appHeading'>
+        <div className="appHeadingText">
+          <h1 className="appTitle" >THE FIELD TRIP</h1>
+          <h2 className="subTitle"> A directory of beautifully unique places in Chicago.</h2>
+          <br/>
+        </div>
+      </div>
+      <br/>
       <Navigations className="navBar" user = {user}/>
-      {user.user_id? <LogoutButton className="logoutButton" user={user} setUser={setUser}/>: null}
+        {user.user_id? <LogoutButton className="logoutButton" user={user} setUser={setUser}/>: null}
+     
        <div className='App'>
         <Routes>
           <Route path="/" element={<Places/>}/>

@@ -31,19 +31,21 @@ export default function Register({user, setUser}) {
   }
 
   return (
-
+<>
     <div className="signUp">
         { user.user_id?
         <div className="registrationPageButtons">
-          <h2 className="registrationSuccessful">Registration successful!</h2>
+          <h2 className="registrationSuccessful">Thank you for registering, {`${user.first_name}`}!</h2>
           <button onClick={() => {
-            navigate(`/account`)
-          }}>Go to Account</button>
+            navigate(`/places`)
+          }}>Explore Locations</button>
 
         </div>
         :
+
       <form className="registrationForm" onSubmit={handleSubmit}>
         <h2 className="registerHeading">Register</h2>
+        <span> Registering will allow you to save a list of your favorite places and submit your own favorite Chicago locations to our directory.</span> <br/> <br/>
         <label>
           First Name:<input value={firstName} onChange={(event) => setFirstname(event.target.value)} /> <br/>
         </label>
@@ -61,5 +63,6 @@ export default function Register({user, setUser}) {
       </form> }
 
     </div>
+    </>
   );
 };
