@@ -1,7 +1,6 @@
 const client = require("../client");
 // const util = require("../util");
 
-// GET - /api/board-games - get all board games
 async function getAllPlaces() {
   try {
     const { rows } = await client.query(`
@@ -13,7 +12,6 @@ async function getAllPlaces() {
   }
 }
 
-// GET - /api/board-games/:id - get a single board game by id
 async function getPlaceById(id) {
   try {
     const {
@@ -30,7 +28,7 @@ async function getPlaceById(id) {
     throw error;
   }
 }
-// POST - /api/board-games - create a new board game
+
 async function createPlace(body) {
   const {
     placeName,

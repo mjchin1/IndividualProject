@@ -1,7 +1,6 @@
-import { useState, useEffect } from "react";
-// import RemoveButton from './RemoveButton'; 
-import {useNavigate} from 'react-router-dom'
-import RemoveButton from './RemoveButton'
+import { useEffect } from "react";
+import { useNavigate }  from 'react-router-dom';
+import RemoveButton from './RemoveButton';
 
 export default function Favorites({ user, favorites, setFavorites }) {
   const navigate = useNavigate()
@@ -15,7 +14,6 @@ export default function Favorites({ user, favorites, setFavorites }) {
         });
         const result = await response.json();
         setFavorites(result);
-        console.log(result)
       } catch (error) {
         console.error(error);
       }
@@ -26,11 +24,11 @@ export default function Favorites({ user, favorites, setFavorites }) {
   if(!favorites.length) {
     return (
     <>
-      <p className ="noFavoritesMessage">You currently do not have any favorite places saved.</p>
+      <p className ="noFavoritesMessage">You do not currently have any favorite places saved.</p>
       <div className="favoritesPageButton">
         <button onClick={() => {
           navigate(`/places`);
-        }}>Back to All Places</button> 
+        }}>Explore Locations</button> 
       </div>
     </>)
   }
@@ -55,11 +53,10 @@ export default function Favorites({ user, favorites, setFavorites }) {
                 setFavorites={setFavorites}
               />
               <br />
-              
-             
             </div>
           </div>
           <div className="longBreakLine"></div>
+        
           <br/>
           </>
         ))}

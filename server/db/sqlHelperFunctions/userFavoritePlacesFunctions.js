@@ -48,7 +48,6 @@ async function addFavoritePlace(body) {
   }
 }
 
-// DELETE - /api/board-games/:id - delete a single board game by id
 async function deleteFavoritePlace(id) {
   try {
     const {

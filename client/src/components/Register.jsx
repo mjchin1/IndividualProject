@@ -6,7 +6,6 @@ export default function Register({user, setUser}) {
   const [lastName, setLastname] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState(null);
   const navigate = useNavigate();
 
   async function handleSubmit(event) {

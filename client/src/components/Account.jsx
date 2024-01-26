@@ -16,7 +16,6 @@ export default function Account({ user, favorites }) {
         });
         const result = await response.json();
         setData(result);
-        console.log(result)
       } catch (error) {
       }
     }

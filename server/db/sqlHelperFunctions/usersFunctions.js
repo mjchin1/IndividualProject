@@ -1,7 +1,6 @@
 const client = require("../client");
 const util = require("util");
 
-// POST - /api/board-games - create a new board game
 async function createUser(body) {
   const { firstName, lastName, username, password } = body;
   try {
@@ -22,7 +21,6 @@ async function createUser(body) {
     throw error;
   }
 }
-//login should be POST
 
 async function getAllUsers() {
   try {

@@ -1,6 +1,3 @@
-//Make some arrays of objects based on the schema I created
-
-//trainers
 const places = [
   {
     placeName: "Four Letter Word Coffee",
@@ -263,7 +260,6 @@ const places = [
   },
 ];
 
-//pokemon
 const users = [
   {
     firstName: "Melody",
@@ -280,7 +276,6 @@ const users = [
   },
 ];
 
-//species
 const userFavoritePlaces = [
   {
     userId: 1,
@@ -306,5 +301,4 @@ const userFavoritePlaces = [
   },
 ];
 
-//export our mock data variables for use elsewhere
 module.exports = { places, users, userFavoritePlaces };

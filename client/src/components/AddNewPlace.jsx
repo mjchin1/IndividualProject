@@ -33,8 +33,8 @@ export default function addNewPlace() {
     setImgUrl("");
     setDescription("");
     setLocationType("");
-    setNeighborhood("")
-    setWebsite("")
+    setNeighborhood("");
+    setWebsite("");
 
 };
 
@@ -75,7 +75,7 @@ return (
       </label><br/> <br/>
   
       <button className="submitButton" onClick={() => {
-        alert("Your submission has been accepted.")
+        alert("Thank you for your submission!")
       }}
        >Submit</button>
        <br/>

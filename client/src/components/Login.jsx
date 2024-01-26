@@ -17,56 +17,49 @@ export default function Login({ setUser, user}) {
         },
         body: JSON.stringify({ username, password })
       });
-      if (!response.ok) {
-        const result = await response.json();
-        throw Error(result.message)
-      }
       const result = await response.json();
       setUser(result);
-      console.log(result.user_id)
       setUsername("");
       setPassword("");
     } catch (error) {
-    }
+    };
 
-  }
+  };
 
   return (
     <>
-    <br/>
-    <div className="loginPage">
+      <br/>
+      <div className="loginPage">
 
-      {user.user_id ? <> <h1 className="loginMessage"> Welcome back, {`${user.first_name}`}!</h1>
-      
-        <div className="loginPageButtons">
-        <button onClick={() => {
-          navigate(`/account`);
-        }}>Go to Account</button>
-
-        <button onClick={() => {
-          navigate(`/places`);
-        }}>Explore Locations</button> 
-
-        </div>
+        {user.user_id ? <> <h1 className="loginMessage"> Welcome back, {`${user.first_name}`}!</h1>
         
-        </>
-        :       
-        <form className="loginForm"onSubmit={handleSubmit}>
-        <h2 className="loginHeading">Log In</h2>
-        <span>Already have an account? Log in below.</span> <br/> <br/>
-        <label>
-          Username:<input value={username} onChange={(event) => setUsername(event.target.value)} />
-        </label>
-        <label>
-          Password:<input type="password" value={password} onChange={(event) => setPassword(event.target.value)} />
-        </label>
-        <button className="submitButton"
-        >Submit</button>
+          <div className="loginPageButtons">
+          <button onClick={() => {
+            navigate(`/account`);
+          }}>Go to Account</button>
 
-      </form>}
+          <button onClick={() => {
+            navigate(`/places`);
+          }}>Explore Locations</button> 
 
-    </div>
-      </>
+          </div>
+          
+          </>
+          :       
+          <form className="loginForm"onSubmit={handleSubmit}>
+            <h2 className="loginHeading">Log In</h2>
+            <span>Already have an account? Log in below.</span> <br/> <br/>
+            <label>
+              Username:<input value={username} onChange={(event) => setUsername(event.target.value)} />
+            </label>
+            <label>
+              Password:<input type="password" value={password} onChange={(event) => setPassword(event.target.value)} />
+            </label>
+            <button className="submitButton"
+            >Submit</button>
+          </form>}
+        </div>
+    </>
 
   );
 };

@@ -1,9 +1,7 @@
-//pulling in the connection to my local database
 const client = require("./client");
 
 const { places, users, userFavoritePlaces } = require("./seedData");
 
-//Drop tables for data cleanliness
 const dropTables = async () => {
   try {
     console.log("Dropping tables...");
@@ -20,7 +18,6 @@ const dropTables = async () => {
   }
 };
 
-//Create tables for to give data a home <3
 const createTables = async () => {
   try {
     console.log("building tables...");
@@ -58,12 +55,9 @@ const createTables = async () => {
   }
 };
 
-//Populate tables for to have data later :)
-//Create types
 const createInitialPlaces = async () => {
   try {
     for (const place of places) {
-      // console.log(typeName)
       await client.query(
         `
                 INSERT INTO places(place_name, address, hours, img_url, description, location_type, neighborhood, website)
@@ -87,7 +81,6 @@ const createInitialPlaces = async () => {
   }
 };
 
-//Create species
 const createInitialUsers = async () => {
   try {
     for (const user of users) {
@@ -122,31 +115,19 @@ const createInitialFavoritePlaces = async () => {
   }
 };
 
-// //INSERT INTO table(column)
-// //VALUES(column_data);
-
-// //INSERT INTO users(name)
-// //VALUES('Megan');
-
-//Call all my functions to build my database
 const buildDb = async () => {
   try {
-    //ACTUALLY CONNECT to my local database
     client.connect();
 
-    //Run our functions
     await dropTables();
     await createTables();
 
     await createInitialPlaces();
     await createInitialUsers();
     await createInitialFavoritePlaces();
-    // await createInitialUsers();
   } catch (error) {
     console.error(error);
-    //finally will ALWAYS run, whether the catch triggers or not
   } finally {
-    //close our connection to my local database
     client.end();
   }
 };

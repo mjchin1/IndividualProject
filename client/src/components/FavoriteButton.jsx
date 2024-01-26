@@ -1,4 +1,4 @@
-import { useState } from 'react';
+
 
 export default function FavoriteButton({ userId, placeId, setFavorites }) {
 
@@ -11,7 +11,6 @@ export default function FavoriteButton({ userId, placeId, setFavorites }) {
       });
       const result = await response.json();
       setFavorites(result);
-      console.log(result)
       
 
     } catch (error) {
