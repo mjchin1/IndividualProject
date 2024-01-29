@@ -7,7 +7,7 @@ export default defineConfig({
     proxy: {
       "/api": {
         // target: "http://localhost:8080/api",
-        target: "https://field-trip-server.onrender.com",
+        target: "https://field-trip-server.onrender.com/api",
         changeOrigin: true,
         secure: false,
         rewrite: (path) => path.replace(/^\/api/, ""),
