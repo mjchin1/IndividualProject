@@ -4,7 +4,7 @@ export default function RemoveButton({ favoritePlace,favorites, setFavorites }) 
 
   async function handleClick() {
     try {
-      const response = await fetch(`/api/favorite-places/${favoritePlace.favorite_place_id}`, {
+      const response = await fetch(`https://field-trip-server.onrender.com/api/favorite-places/${favoritePlace.favorite_place_id}`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",

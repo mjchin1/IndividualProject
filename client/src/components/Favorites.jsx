@@ -7,7 +7,7 @@ export default function Favorites({ user, favorites, setFavorites }) {
   useEffect(() => {
     async function fetchFavorites() {
       try {
-        const response = await fetch(`/api/users/${user.user_id}/favorites`, {
+        const response = await fetch(`https://field-trip-server.onrender.com/api/users/${user.user_id}/favorites`, {
           headers: {
             "Content-Type": "application/json",
           },

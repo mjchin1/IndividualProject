@@ -4,7 +4,7 @@ export default function FavoriteButton({ userId, placeId, setFavorites }) {
 
   async function handleClick() {
     try {
-      const response = await fetch('/api/favorite-places', {
+      const response = await fetch('https://field-trip-server.onrender.com/api/favorite-places', {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({userId, placeId}),
