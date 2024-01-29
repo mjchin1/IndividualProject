@@ -3,7 +3,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const placesApi = createApi({
   reducerPath: "placesApi",
   baseQuery: fetchBaseQuery({
-    baseUrl: "/api",
+    baseUrl: "https://field-trip-server.onrender.com/api",
     prepareHeaders(headers) {
       headers.set("Content-type", "application/json");
       return headers;
