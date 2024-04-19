@@ -1,6 +1,6 @@
 import React from 'react';
 import { useFetchPlacesQuery } from '../api/placesAPI.js';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 
 
@@ -26,8 +26,12 @@ const Places = () => {
     <div className="placeContainer">
         
       <div className="places">
-    <br/>
         <h1 className="placesHeading"> Let's explore. </h1> <br/> <br/>
+        <div className="appDescription">
+        <p>The Field Trip is a directory that is dedicated to helping you find Chicago's most beautiful and unique spaces. Whether you're new to Chicago or just looking to venture outside of your neighborhood, we hope to introduce you to new places that will help you find inspiration while reminding you how special this city is.</p>
+
+        <p>Browse our directory below, or<Link to = '/register'>create an account</Link>to save a list of your favorite places and add your own favorite Chicago locations to the directory. </p>
+        </div> <br/> <br/>
         
         {data.map((place) => (
           <div key={place.place_id} className="place-card">
