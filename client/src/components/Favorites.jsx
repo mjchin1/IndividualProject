@@ -56,7 +56,7 @@ export default function Favorites({ user, favorites, setFavorites }) {
               <br />
             </div>
           </div>
-          <div className="longBreakLine"></div>
+          <div className="longBreakLine favoritesBreakLine"></div>
         
           <br/>
           </>

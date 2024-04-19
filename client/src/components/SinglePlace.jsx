@@ -27,11 +27,11 @@ export default function SinglePlace({userId}) {
       
       <div key={data.place_id} className="singlePlaceCard">
 
-      <span className="singlePlaceName">  {data.place_name} </span> <br/>
+      <p className="singlePlaceName">  {data.place_name} </p>
       
-      <div className="breakLine"></div>
+      <div className=" breakLine singlePlaceBreakLine"></div>
       
-        <div className="place-image-container">
+        <div className="single-place-image-container">
           <img className="singlePlaceImage" src={data.img_url} />
         </div>
 
@@ -43,14 +43,14 @@ export default function SinglePlace({userId}) {
      
         <div className="placeDescription"> {data.description} </div> <br/>
        
-        {!userId? <> <span className="loginPrompt">Please log in to add this place to your list of favorites.</span> <br/> <br/></> :null}
+        {!userId? <> <p className="loginPrompt">Please log in to add this place to your list of favorites.</p> <br/> <br/></> :null}
        
         <div className="singlePlacePageButtons">
           <button className="backButton" onClick={() => {
             navigate(`/places`)
           }} >Back to All Locations</button>
           {userId? <FavoriteButton className="favoriteButton" userId = {userId} placeId = {data.place_id}/> :null}
-          {userId? <DeletePlaceButton className="delete-button" id = {id} /> :null} 
+          {userId && data.place_id > 21? <DeletePlaceButton className="delete-button" id = {id} /> :null} 
         </div>
 
         </div>

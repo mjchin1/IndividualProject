@@ -45,8 +45,8 @@ return (
     <form className="submitPlaceForm"onSubmit={handleSubmit}>
     <h2 className="loginHeading">Submit Your Favorite Chicago Location</h2>
     <div className="submitPrompt">
-    <span>Do you have a cool place that you think more people should know about?</span>  <br/>
-    <span>Submit it to our directory here!</span>
+    <p>Do you have a cool place that you think more people should know about?</p>
+    <p>Submit it to our directory here!</p>
     </div>
     <br/> 
       <label>
