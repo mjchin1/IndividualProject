@@ -79,6 +79,19 @@ const places = [
   },
 
   {
+    placeName: "Lost Larson",
+    address: "5318 N Clark St, Chicago, IL 60640",
+    hours: "Tuesday-Sunday: 7:00am-3:00pm",
+    imgUrl:
+      "https://res.cloudinary.com/the-infatuation/image/upload/v1656121495/cms/reviews/lost-larson-bakery/9M7A8208.jpg",
+    description:
+      "A beautifully-designed space with delicious, Scandanavian-inspired baked treats and coffee.",
+    locationType: "Cafe",
+    neighborhood: "Andersonville",
+    website: "https://www.lostlarson.com",
+  },
+
+  {
     placeName: "The Winter Garden",
     address: "400 S State St, Chicago, IL 60605",
     hours:
