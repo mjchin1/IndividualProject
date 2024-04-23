@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useNavigate }  from 'react-router-dom';
 import RemoveButton from './RemoveButton';
+import { Link } from 'react-router-dom'
 
 export default function Favorites({ user, favorites, setFavorites }) {
   const navigate = useNavigate()
@@ -46,7 +47,7 @@ export default function Favorites({ user, favorites, setFavorites }) {
               <img className="place-image" src={favoritePlace.img_url} />
             </div>
             <div className="place-details">
-              <span className="favoritePlaceName">  {favoritePlace.place_name} </span> <br />
+              <Link to= {`/places/${favoritePlace.place_id}`} className="favoritePlaceName">  {favoritePlace.place_name} </Link> <br />
 
               <RemoveButton
                 favorites={favorites}
