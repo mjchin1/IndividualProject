@@ -11,7 +11,7 @@ export default function Login({ setUser, user}) {
     event.preventDefault();
     try {
       // const response = await fetch('http://localhost:8080/api/users/login', {
-      const response = await fetch('https://field-trip-server.onrender.com/api/users/login', {
+      const response = await fetch('https://thefieldtrip-backend.onrender.com/api/users/login', {
         method: "POST",
         headers: {
           'Content-Type': 'application/json',

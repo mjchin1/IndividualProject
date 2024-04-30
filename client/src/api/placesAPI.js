@@ -4,7 +4,7 @@ export const placesApi = createApi({
   reducerPath: "placesApi",
   baseQuery: fetchBaseQuery({
     // baseUrl: "http://localhost:8080/api/",
-    baseUrl: "https://field-trip-server.onrender.com/api",
+    baseUrl: "https://thefieldtrip-backend.onrender.com/api",
     prepareHeaders(headers) {
       headers.set("Content-type", "application/json");
       return headers;
