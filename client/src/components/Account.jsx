@@ -8,8 +8,8 @@ export default function Account({ user, favorites }) {
   useEffect(() => {
     async function getUser() {
       try {
-        const response = await fetch(`http://localhost:8080/api/users/${user.user_id}`, {
-        // const response = await fetch(`https://field-trip-server.onrender.com/api/users/${user.user_id}`, {
+        // const response = await fetch(`http://localhost:8080/api/users/${user.user_id}`, {
+        const response = await fetch(`https://field-trip-server.onrender.com/api/users/${user.user_id}`, {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
