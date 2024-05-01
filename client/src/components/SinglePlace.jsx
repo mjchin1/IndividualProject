@@ -10,6 +10,14 @@ export default function SinglePlace({userId}) {
   const { data = {}, error, isLoading } = useFetchSinglePlaceQuery(id);
   const navigate = useNavigate();
 
+  function goToLogin() {
+    navigate("/login");
+  };
+
+  function goToRegister() {
+    navigate("/register");
+  };
+
   console.log(useFetchSinglePlaceQuery(id))
  
   if (isLoading) {
@@ -43,7 +51,7 @@ export default function SinglePlace({userId}) {
      
         <div className="placeDescription"> {data.description} </div> <br/>
        
-        {!userId? <> <p className="loginPrompt">Please log in to add this place to your list of favorites.</p> <br/> <br/></> :null}
+        {!userId? <> <p className="loginPrompt">Please <a className="hyperlink" onClick={goToLogin}>log in</a> or <a className="hyperlink" onClick={goToRegister}>register</a>to add this place to your list of favorites.</p> <br/> <br/></> :null}
        
         <div className="singlePlacePageButtons">
           <button className="backButton" onClick={() => {
