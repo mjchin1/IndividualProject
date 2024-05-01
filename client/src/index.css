@@ -184,6 +184,7 @@ a{
   cursor: pointer;
   padding-left: 0;
   padding-right: 0;
+  text-decoration: underline;
 }
 .breakLine {
   border-bottom: solid;

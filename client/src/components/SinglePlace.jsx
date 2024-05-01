@@ -51,7 +51,7 @@ export default function SinglePlace({userId}) {
      
         <div className="placeDescription"> {data.description} </div> <br/>
        
-        {!userId? <> <p className="loginPrompt">Please <a className="loginPrompt hyperlink" onClick={goToLogin}>log in</a> or <a className="loginPrompt hyperlink" onClick={goToRegister}>register</a>to add this place to your list of favorites.</p> <br/> <br/></> :null}
+        {!userId? <> <p className="loginPrompt">Please <a className="loginPrompt hyperlink" onClick={goToLogin}>log in</a> or <a className="loginPrompt hyperlink" onClick={goToRegister}>register</a> to add this place to your list of favorites.</p> <br/> <br/></> :null}
        
         <div className="singlePlacePageButtons">
           <button className="backButton" onClick={() => {
