@@ -178,6 +178,11 @@ a{
 .loginPrompt {
   font-weight: 650;
 }
+
+.hyperlink{
+  font-size: 20px;
+
+}
 .breakLine {
   border-bottom: solid;
   width: 200px;
