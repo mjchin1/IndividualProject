@@ -182,7 +182,8 @@ a{
 .hyperlink{
   font-size: 16px;
   cursor: pointer;
-
+  padding-left: 0;
+  padding-right: 0;
 }
 .breakLine {
   border-bottom: solid;
