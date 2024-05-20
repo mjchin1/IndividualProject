@@ -45,9 +45,10 @@ function App() {
         </Routes>
        </div>
        <br/>
-       <div className="breakLine"></div> <br/>
+       <div className="breakLine"></div>
        <div ClassName="footer">
-        <p className="footerText"> Created by Melissa Chin, 2024.</p>
+        <p className="footerText"> The Field Trip </p> 
+        <p className="footerText"> Melissa Chin, 2024.</p>
         <a className="footerText githubLink" href="https://github.com/mjchin1/TheFieldTrip-ChicagoDirectory" target="_blank"> GitHub Repository</a>
        </div>
     </div>
