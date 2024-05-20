@@ -48,7 +48,7 @@ function App() {
        <div className="breakLine"></div> <br/>
        <div ClassName="footer">
         <p className="footerText"> Created by Melissa Chin, 2024.</p>
-        <a className="footerText githubLink" href="https://github.com/revive-team1/revive-capstone" target="_blank"> GitHub Repository</a>
+        <a className="footerText githubLink" href="https://github.com/mjchin1/TheFieldTrip-ChicagoDirectory" target="_blank"> GitHub Repository</a>
        </div>
     </div>
   );

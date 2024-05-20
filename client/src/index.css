@@ -316,6 +316,14 @@ label {
   font-size: 20px;
 }
 
+.footerText {
+  font-size: 16px
+}
+
+.githubLink {
+  text-decoration: underline;
+}
+
 
 @media (prefers-color-scheme: light) {
   :root {
