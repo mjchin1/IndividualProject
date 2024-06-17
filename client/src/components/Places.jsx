@@ -32,6 +32,8 @@ const Places = () => {
 
         <p>Browse our directory below, or<Link to = '/register' className="descriptionLink">create an account</Link>to save a list of your favorite places and add your own favorite Chicago locations to the directory. </p>
         </div> <br/> <br/>
+
+        <div className="break"></div>
         
         {data.map((place) => (
           <div key={place.place_id} className="place-card">

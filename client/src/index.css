@@ -324,6 +324,10 @@ label {
   text-decoration: underline;
 }
 
+.break {
+  width: 100vw;
+}
+
 
 @media (prefers-color-scheme: light) {
   :root {
