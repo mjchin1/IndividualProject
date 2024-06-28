@@ -103,7 +103,7 @@ const places = [
     locationType: "Library",
     neighborhood: "The Loop",
     website:
-      "https://americanlibrariesmagazine.org/wp-content/uploads/2017/05/btn1.jpg",
+      "https://www.chipublib.org/news/your-new-favorite-study-space-winter-garden-at-harold-washington-library-center/",
   },
 
   {
