@@ -362,6 +362,10 @@ label {
     color: black;
   }
 
+  input {
+    border-color: black; 
+  }
+
   .hyperlink {
     margin-left: 5px;
     margin-right: 5px;
