@@ -350,9 +350,17 @@ label {
   button {
     background-color: white;
   }
+
+  input {
+    background-color: white;
+  }
 }
 
 @media screen and (max-width: 500px) {
+
+  button {
+    color: black;
+  }
 
   .hyperlink {
     margin-left: 5px;
