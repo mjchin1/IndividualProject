@@ -456,6 +456,7 @@ label {
 
  .loginPrompt {
   width: 250px;
+  margin-left: -68px
  }
 
  .registrationForm {
