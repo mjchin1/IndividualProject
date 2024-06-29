@@ -354,8 +354,9 @@ label {
 
 @media screen and (max-width: 500px) {
 
-  .button {
-    color: black;
+  .hyperlink {
+    margin-left: 5px;
+    margin-right: 5px;
   }
 
   .appTitle {
