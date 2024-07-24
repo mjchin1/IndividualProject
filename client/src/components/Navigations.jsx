@@ -10,6 +10,7 @@ export default function Navigations({user}) {
             {user.user_id? <Link to = '/new-place'>Submit a Location</Link> :null}
             {user.user_id? <Link to = {`/users/${user.user_id}/favorites`}>Favorites</Link>: null}
             {user.user_id? <Link to = {`/account`}>Account</Link> : null}
+            <a href="https://www.youtube.com/watch?v=NQ1TmC6dGYo" target="_blank">Watch a Live App Demo</a>
         </nav>
     );
 };
